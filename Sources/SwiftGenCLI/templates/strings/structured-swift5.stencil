@@ -86,6 +86,8 @@ extension {{enumName}} {
 }
 {% if not param.bundle and not param.lookupFunction %}
 
+// swiftlint:enable superfluous_disable_command file_length implicit_return prefer_self_in_static_references
+
 // swiftlint:disable convenience_type
 private final class BundleToken {
   static let bundle: Bundle = {
@@ -101,3 +103,4 @@ private final class BundleToken {
 {% else %}
 // No string found
 {% endif %}
+// swiftlint:enable all
